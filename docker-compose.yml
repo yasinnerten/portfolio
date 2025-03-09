@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: 
+      context: ./portfolio-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8080/api
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./portfolio-backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./portfolio-backend/static:/root/static
+      - ./portfolio-backend/db:/root/db
+    environment:
+      - PORT=8080
+      - DB_PATH=/root/db/portfolio.db
+      - APP_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db-data: 

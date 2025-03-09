@@ -1,0 +1,181 @@
+Now we will create a we b page contains my portfolio.
+
+Here is structure to build the page:
+## 🏗 **Project Structure**
+
+### **Frontend (Next.js with Tailwind CSS)**
+
+```
+/portfolio-frontend
+│── public/                 # Static assets (Images, Icons, Fonts)
+│── src/
+│   ├── assets/             # Additional images and icons
+│   ├── components/         # Reusable UI components
+│   ├── app/                # Next.js app router pages
+│   │   ├── page.tsx        # Home Page
+│   │   ├── about/page.tsx  # About Me
+│   │   ├── projects/page.tsx # Projects Page
+│   │   ├── experience/page.tsx # Experience Page
+│   │   ├── contact/page.tsx # Contact Page
+│   │   ├── layout.tsx      # Root layout
+│   ├── styles/             # Global styles (Tailwind)
+│   ├── services/           # API calls (Axios)
+│── next.config.js          # Next.js Config
+│── package.json            # Dependencies
+│── tsconfig.json           # TypeScript Config
+│── tailwind.config.js      # Tailwind Config
+│── Dockerfile              # Docker containerization
+```
+
+### **Backend (Go + Gin + SQLite)**
+lets continue with Building the backend with Go, Gin, and SQLite
+```
+/portfolio-backend
+│── main.go                  # Entry point
+│── config/                  # Config files
+│── controllers/             # API controllers
+│── routes/                  # Route definitions
+│── models/                  # Database models (SQLite)
+│── database/                # SQLite connection
+│── middleware/              # Middleware (auth, logging)
+│── static/                  # Stores uploaded images (if needed)
+│── Dockerfile               # Docker containerization
+│── go.mod                   # Go module dependencies
+│── docker-compose.yml       # Container orchestration
+```
+
+---
+
+---
+
+## **🛠 Steps to Deploy on AWS Free Tier**
+1. Install Docker & AWS CLI on your EC2 instance.
+2. Clone your GitHub repository.
+3. Run `docker-compose up -d` to deploy the services.
+4. Use **AWS Route 53** or **Elastic IP** to configure a domain.
+
+---
+
+This setup provides a **lightweight, SQLite-based** solution for your portfolio. Images should be placed in `public/` or `src/assets/` for frontend and `static/` for backend if needed. Let me know if you need further modifications! 🚀
+---
+
+This setup provides a **scalable**, **containerized** solution for your portfolio. Let me know if you need any modifications! 🚀
+
+
+Here is the content of the page:
+Contents:
+
+Portfolio Website Structure
+
+Home Page
+
+Name: Ahmet Yasin Erten
+
+Title: Associate DevOps Engineer
+
+Location: Istanbul, Turkey
+
+Contact Information:
+
+Email: yasinnerten@hotmail.com
+
+LinkedIn: linkedin.com/in/yasinnerten
+
+Phone: +90 531 918 4189
+
+About Me
+
+Brief introduction about yourself, your professional background, and your passion for DevOps and system administration.
+
+Mention your experience with virtualization platforms and enterprise IT environments.
+
+Work Experience
+
+BTS Group
+
+Associate DevOps Engineer (Oct 2024 – Present)
+
+Working on Sybelle SDDC Platform, assisting with DevOps missions.
+
+DevOps Engineering Intern (May 2024 – Sept 2024)
+
+Hands-on DevOps projects with mentorship from senior engineers.
+
+Eczacıbaşı Esan
+
+Information Technology Intern (Oct 2023 – April 2024)
+
+IT Audit, service operations, and information security in 7 mining locations.
+
+Istanbul Technical University IT Department
+
+System Administrator (Feb 2024 – Sept 2024)
+
+Responsible for Linux systems, DevOps operations, and advanced server management.
+
+Part-Time Network and System Engineer (June 2022 - Aug 2022)
+
+RedHat and CCNA certification, database and server management.
+
+Assistant Student (Nov 2021 - May 2022)
+
+Worked on IT support and Linux Academy training.
+
+Education
+
+BSc in Industrial Engineering, Istanbul Technical University (2019 - 2025)
+
+GPA: 3.0/4.0
+
+Thesis: Usage Prediction and System Design on Digital Twin with Metro Istanbul
+
+Erasmus+ Exchange, Technical University of Kaiserslautern (2022 - 2023)
+
+Studied Business Informatics, completed 4 projects and 1 case study.
+
+Projects
+
+Sybelle SDDC Platform
+
+Contributions to DevOps automation and virtualization enhancements.
+
+IT Security Audit for Eczacıbaşı Esan
+
+Improved security protocols for 7 mining locations.
+
+Linux System Administration at ITU
+
+Advanced server configuration and DevOps automation.
+
+Certifications
+
+CCNA (Cisco Certified Network Associate)
+
+RedHat System Administration 1 & 2
+
+German A2 Language Certificate
+
+Voluntary Activities
+
+TEMA Foundation (May 2020 - Present)
+
+Reforestation and natural habitat protection.
+
+ESTIEM (Nov 2020 - June 2022)
+
+Student exchange and management events across Europe.
+
+Motivation Letters
+
+Section for uploading or linking to motivation letters for job applications and opportunities.
+
+Social Media
+
+LinkedIn: linkedin.com/in/yasinnerten
+
+GitHub (if available)
+
+Contact
+
+Include a contact form or a direct email link.
+
