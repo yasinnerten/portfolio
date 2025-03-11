@@ -6,6 +6,9 @@ WORKDIR /app
 # Copy package files
 COPY package.json package-lock.json* ./
 
+# Copy the public folder
+COPY ./public ./public
+
 # Install dependencies
 RUN npm ci
 

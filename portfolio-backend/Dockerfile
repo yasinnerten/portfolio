@@ -22,15 +22,22 @@ FROM alpine:latest
 
 WORKDIR /root/
 
-# Install runtime dependencies for SQLite
-RUN apk add --no-cache sqlite
+# Install runtime dependencies for SQLite and PDF handling
+RUN apk add --no-cache sqlite curl wget poppler-utils ghostscript font-noto
 
 # Copy the binary from builder
 COPY --from=builder /app/main .
 
 # Create directories
-RUN mkdir -p static
-RUN mkdir -p db
+RUN mkdir -p static && chmod 755 static
+RUN mkdir -p db && chmod 755 db
+
+# Copy static files
+COPY ./static /root/static/
+
+# Ensure files are readable
+RUN chmod -R 644 /root/static/* && \
+    find /root/static -type d -exec chmod 755 {} \;
 
 # Expose port
 EXPOSE 8080

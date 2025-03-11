@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function Experience() {
@@ -18,11 +18,15 @@ export default function Experience() {
       {/* About Me Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
         <div className="absolute inset-0 opacity-20">
-          <Image 
-            src="/1697474830965.jpg" 
+          <img 
+            src="http://localhost:8080/static/1697474830965.jpg" 
             alt="Background"
-            layout="fill"
-            objectFit="cover"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              position: 'absolute',
+            }}
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
@@ -35,12 +39,14 @@ export default function Experience() {
                 variants={fadeIn}
                 transition={{ duration: 0.6 }}
               >
-                <Image
-                  src="/linkedn.jpg"
+                <img
+                  src="http://localhost:8080/static/linkedn.jpg"
                   alt="Ahmet Yasin Erten"
-                  width={256}
-                  height={256}
-                  className="rounded-full"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '50%'
+                  }}
                 />
               </motion.div>
             </div>
@@ -70,7 +76,7 @@ export default function Experience() {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <a 
-                  href="/Ahmet Yasin Erten.pdf" 
+                  href="http://localhost:8080/static/Ahmet_Yasin_Erten.pdf" 
                   download
                   className="px-8 py-3 bg-white text-blue-900 hover:bg-blue-100 rounded-lg transition duration-300 font-medium inline-flex items-center gap-2"
                 >

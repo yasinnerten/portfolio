@@ -30,11 +30,15 @@ const Projects: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="h-64 relative">
-                <Image 
-                  src="/1697474830965.jpg" 
+                <img 
+                  src="http://localhost:8080/static/1697474830965.jpg" 
                   alt="Digital Twin Project"
-                  layout="fill"
-                  objectFit="cover"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    position: 'absolute',
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                   <h3 className="text-white text-2xl font-bold p-6">Usage Prediction and System Design on Digital Twin</h3>
@@ -64,11 +68,15 @@ const Projects: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className="h-64 relative">
-                <Image 
-                  src="/1697474830965.jpg" 
+                <img 
+                  src="http://localhost:8080/static/1697474830965.jpg" 
                   alt="Digital Twin Project"
-                  layout="fill"
-                  objectFit="cover"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    position: 'absolute',
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                   <h3 className="text-white text-2xl font-bold p-6">Usage Prediction and System Design on Digital Twin</h3>
@@ -120,14 +128,15 @@ const Projects: React.FC = () => {
             transition={{ delay: 0.4 }}
           >
             <a 
-              href="/Ahmet Yasin Erten.pdf" 
-              download
+              href="http://localhost:8080/view-resume" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-300 inline-flex items-center gap-2"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              Download My Resume
+              View My Resume
             </a>
           </motion.div>
         </div>

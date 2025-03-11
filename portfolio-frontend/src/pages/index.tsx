@@ -15,24 +15,29 @@ export default function Home() {
       {/* Hero Section with Background Image */}
       <div className="relative h-screen">
         <div className="absolute inset-0">
-          <Image 
-            src="/1697474830965.jpg" 
+          <img 
+            src="http://localhost:8080/static/1697474830965.jpg" 
             alt="Istanbul Skyline"
-            layout="fill"
-            objectFit="cover"
-            priority
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              position: 'absolute',
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-blue-900/50 to-black/70" />
         </div>
         
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4 z-10">
           <div className="mb-8 rounded-full overflow-hidden border-4 border-white shadow-xl">
-            <Image
-              src="/linkedn.jpg"
+            <img
+              src="http://localhost:8080/static/linkedn.jpg"
               alt="Ahmet Yasin Erten"
-              width={200}
-              height={200}
-              className="rounded-full"
+              style={{
+                width: '200px',
+                height: '200px',
+                borderRadius: '50%'
+              }}
             />
           </div>
           
@@ -80,7 +85,7 @@ export default function Home() {
               </a>
             </Link>
             <a 
-              href="/Ahmet Yasin Erten.pdf" 
+              href="http://localhost:8080/static/Ahmet_Yasin_Erten.pdf" 
               download
               className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition duration-300 font-medium flex items-center gap-2"
             >
@@ -132,6 +137,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Debug Images - you can remove these once everything works */}
+      <div className="mt-10">
+        <h2>Debug Image:</h2>
+        <img 
+          src="http://localhost:8080/static/linkedn.jpg" 
+          alt="Debug" 
+          style={{width: '200px', height: '200px'}} 
+        />
+      </div>
+
+      <img 
+        src="http://localhost:8080/static/linkedn.jpg" 
+        alt="Test direct image" 
+        style={{width: '100px', height: '100px'}}
+      />
+      <img 
+        src="http://localhost:8080/static/1697474830965.jpg"
+        alt="Test backend image" 
+        style={{width: '100px', height: '100px'}}
+      />
     </div>
   )
 } 

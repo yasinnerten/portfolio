@@ -22,7 +22,24 @@ func SetupRouter() *gin.Engine {
 	r.Use(middleware.SetupCORS())
 
 	// Static files
-	r.Static("/static", "./static")
+	r.Static("/static", "/root/static")
+
+	// Special PDF handler with explicit content-type
+	r.GET("/view-resume", func(c *gin.Context) {
+		filepath := "/root/static/Ahmet_Yasin_Erten.pdf"
+
+		// Set explicit headers for PDF files
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.Header("Access-Control-Allow-Methods", "GET, OPTIONS")
+		c.Header("Access-Control-Allow-Headers", "Origin, Content-Type")
+		c.Header("Content-Description", "File Transfer")
+		c.Header("Content-Transfer-Encoding", "binary")
+		c.Header("Content-Type", "application/pdf")
+		c.Header("Content-Disposition", "inline; filename=\"Ahmet_Yasin_Erten.pdf\"")
+		c.Header("Cache-Control", "public, max-age=86400")
+
+		c.File(filepath)
+	})
 
 	// API routes
 	api := r.Group("/api")
