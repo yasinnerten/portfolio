@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
             >
               <div className="h-64 relative">
                 <img 
-                  src="http://localhost:8080/static/1697474830965.jpg" 
+                  src="https://yasinnerten.com/static/1697474830965.jpg" 
                   alt="Digital Twin Project"
                   style={{
                     width: '100%',
@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
             >
               <div className="h-64 relative">
                 <img 
-                  src="http://localhost:8080/static/1697474830965.jpg" 
+                  src="https://yasinnerten.com/static/1697474830965.jpg" 
                   alt="Digital Twin Project"
                   style={{
                     width: '100%',
@@ -128,7 +128,7 @@ const Projects: React.FC = () => {
             transition={{ delay: 0.4 }}
           >
             <a 
-              href="http://localhost:8080/view-resume" 
+              href="https://yasinnerten.com/view-resume" 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-300 inline-flex items-center gap-2"

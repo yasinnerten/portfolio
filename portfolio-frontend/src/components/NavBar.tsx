@@ -61,7 +61,7 @@ export default function NavBar() {
             </a>
           </Link>
           <motion.a 
-            href="http://localhost:8080/view-resume" 
+            href="https://yasinnerten.com/view-resume" 
             target="_blank"
             rel="noopener noreferrer"
             className={`font-medium flex items-center gap-1 transition-colors duration-300 ${scrolled ? 'text-green-600 hover:text-green-700' : 'text-green-300 hover:text-green-200'}`}
@@ -116,7 +116,7 @@ export default function NavBar() {
               </a>
             </Link>
             <a 
-              href="http://localhost:8080/view-resume"
+              href="https://yasinnerten.com/view-resume"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-green-600 flex items-center gap-1"

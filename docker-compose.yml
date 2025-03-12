@@ -3,23 +3,25 @@ services:
     build: 
       context: ./portfolio-frontend
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     depends_on:
       - backend
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:8080/api 
+      - NEXT_PUBLIC_API_URL=https://yasinnerten.com/api 
       - NODE_ENV=production
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - portfolio-network
 
   backend:
     build: ./portfolio-backend
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     volumes:
       - ./portfolio-backend/static:/root/static
       - ./portfolio-backend/db:/root/db
@@ -32,6 +34,28 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - portfolio-network
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./ssl:/etc/nginx/ssl  # Simple directory for your SSL files
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - portfolio-network
+    restart: always
 
 volumes:
-  db-data: 
+  db-data:
+
+networks:
+  portfolio-network:
+    driver: bridge 

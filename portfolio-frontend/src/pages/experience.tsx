@@ -19,7 +19,7 @@ export default function Experience() {
       <section className="relative py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="http://localhost:8080/static/1697474830965.jpg" 
+            src="https://yasinnerten.com/static/1697474830965.jpg"
             alt="Background"
             style={{
               width: '100%',
@@ -40,7 +40,7 @@ export default function Experience() {
                 transition={{ duration: 0.6 }}
               >
                 <img
-                  src="http://localhost:8080/static/linkedn.jpg"
+                  src="https://yasinnerten.com/static/linkedin.jpg"
                   alt="Ahmet Yasin Erten"
                   style={{
                     width: '100%',
@@ -76,7 +76,7 @@ export default function Experience() {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <a 
-                  href="http://localhost:8080/static/Ahmet_Yasin_Erten.pdf" 
+                  href="https://yasinnerten.com/static/Ahmet_Yasin_Erten.pdf" 
                   download
                   className="px-8 py-3 bg-white text-blue-900 hover:bg-blue-100 rounded-lg transition duration-300 font-medium inline-flex items-center gap-2"
                 >
